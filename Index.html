@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@500&family=IBM+Plex+Mono&family=Inconsolata:wght@600&family=Poppins:ital,wght@1,500&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+<style> /* Documentos css*/
+    *{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    body{
+        background-image: linear-gradient(45deg, grey , black);
+    }
+    .fundo{
+        height: 100vh;           
+    }
+    #texto1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 0.5s forwards; 
+    }
+    #texto2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 3.7s forwards;  
+    }
+    #texto3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 6.9s forwards;  
+    }
+    #texto4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 10.1s forwards;  
+    }
+    #texto5{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 13.3s forwards;  
+    }
+    #texto6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity: 0;
+        animation: fade-in-out 3s ease 16.5s forwards;  
+        animation-duration: infinite;
+    }
+    #texto7{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        margin-top: 130px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: aliceblue;
+        opacity:0;
+        animation: fade-in-out 3s ease-in 19.7s forwards;  
+        animation-duration: infinite;
+    }
+    @keyframes fade-in-out { /*ANIMAÇAO DOS TEXTOS*/
+    0% {
+        opacity: 0; 
+    }
+    25% {
+        opacity: 1; 
+    }
+    75% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
+    .calculadora{
+        position: absolute;
+        background-color: dimgrey;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        padding: 15px;   
+    }
+    button{
+        background-color: rgb(169, 169, 179);
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        cursor: pointer;
+        border: none;
+        color: aliceblue;
+        border-radius: 4px;
+    }
+    button:hover{
+        background-color: rgb(144, 141, 192);
+        transition: 0.3s;
+    }
+    #Resultado{
+        background-color: rgb(235, 238, 241);
+        width: 207px;
+        height: 50px;
+        border-radius: 4px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: end;
+        white-space: nowrap;
+         overflow: hidden;
+         text-overflow:    ellipsis;
+    }
+    p1{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        width: 100%;
+        bottom: 260px;
+        position: absolute;
+        font-family: 'Exo', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Quicksand', sans-serif;
+    }
+                /* Documentos css (fIM)*/
+</style>
+<body>
+    <div class="fundo " >   <!--(LINGUAGENS)--> 
+        <p id ="texto1" >" Bora calcular :D " </p>
+        <p id ="texto2">"let's calculate =D " </p>
+        <p id ="texto3" >" vamos a calcular =D " </p>
+        <p id ="texto4">"Calcoliamo =D " </p>
+        <p id ="texto5" >" D를 계산해 보겠습니다. =D " </p>
+        <p id ="texto6">"Lassen Sie uns rechnen =D " </p>
+        <p id ="texto7">"welcome..." </p>
+        <div class="calculadora">
+            <h1></h1>
+            <p id="Resultado" ></p>
+            <table>
+                <tr><!--(BOTOES CALCULADORA)--> 
+                    <td><button onclick="clean()">C</button></td>
+                    <td><button onclick="back()"><</button></td>
+                    <td><button onclick="insert('/')">/</button></td>
+                    <td><button onclick="insert('*')">*</button></td>
+                </tr>
+                 <tr>
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
+                </tr>
+                 <tr>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
+                </tr>
+                 <tr>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button onclick="calcular()" style="height:102px" >=</button></td>
+                </tr>
+                 <tr>
+                    <td colspan="2 "><button onclick="insert('0')" style="width:102px">0</button></td>
+                    <td><button onclick="insert('.')">.</button></td>
+                </tr>
+            </table>     
+        </div>
+        <p1>By João Mateus</p1>
+    </div>
+    <script>
+        function insert(num) //FUNCAO DE LIMPAR(C) E VOLTAR(<) DA CALCULADORA
+        {
+          var numero =  document.getElementById('Resultado').innerHTML;
+          document.getElementById('Resultado').innerHTML = numero + num
+        }
+        function clean()
+        {
+            document.getElementById('Resultado').innerHTML = '';
+        }
+        function back()
+        {
+            var Resultado = document.getElementById('Resultado').innerHTML;
+            document.getElementById('Resultado').innerHTML = Resultado.substring(0, Resultado.length -1);
+        }
+        function calcular() // FUNCAO DE RESULTADO DE CALCULO 
+        {
+        var Resultado = document.getElementById('Resultado').innerHTML;
+        if(Resultado)  
+        {
+            document.getElementById('Resultado').innerHTML = eval(Resultado);
+        }
+        else{
+            document.getElementById('Resultado').innerHTML = "";
+        }
+        }
+    </script>  
+</body>
+</html>
