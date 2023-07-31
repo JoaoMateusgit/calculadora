@@ -34,6 +34,9 @@
         color: aliceblue;
         opacity: 0;
         animation: fade-in-out 3s ease 0.5s forwards; 
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto2{
         display: flex;
@@ -49,6 +52,9 @@
         color: aliceblue;
         opacity: 0;
         animation: fade-in-out 3s ease 3.7s forwards;  
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto3{
         display: flex;
@@ -64,6 +70,9 @@
         color: aliceblue;
         opacity: 0;
         animation: fade-in-out 3s ease 6.9s forwards;  
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto4{
         display: flex;
@@ -79,6 +88,9 @@
         color: aliceblue;
         opacity: 0;
         animation: fade-in-out 3s ease 10.1s forwards;  
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto5{
         display: flex;
@@ -94,6 +106,9 @@
         color: aliceblue;
         opacity: 0;
         animation: fade-in-out 3s ease 13.3s forwards;  
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto6{
         display: flex;
@@ -110,6 +125,9 @@
         opacity: 0;
         animation: fade-in-out 3s ease 16.5s forwards;  
         animation-duration: infinite;
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     #texto7{
         display: flex;
@@ -126,6 +144,9 @@
         opacity:0;
         animation: fade-in-out 3s ease-in 19.7s forwards;  
         animation-duration: infinite;
+        @media screen and (max-width:428px){
+        display: none;
+   }
     }
     @keyframes fade-in-out { /*ANIMAÇAO DOS TEXTOS*/
     0% {
@@ -183,10 +204,10 @@
     p1{
         display:flex;
         justify-content: center;
-        align-items: center;
+        text-align: center;
         color: aliceblue;
         width: 100%;
-        bottom: 260px;
+        bottom: 20px;
         position: absolute;
         font-family: 'Exo', sans-serif;
         font-family: 'IBM Plex Mono', monospace;
