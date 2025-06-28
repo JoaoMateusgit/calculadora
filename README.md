@@ -29,6 +29,7 @@ Design responsivo para uso em diferentes dispositivos.
 1. Clone este repositório:  
    ```bash
    git clone <URL-do-repositório>
+   Abra o index.html no seu navegador
 
 
   autor: João Mateus Perachi
